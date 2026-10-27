@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, i;
+    
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int a[n];
+
+    printf("Enter %d elements:\n", n);
+
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    printf("Elements at even positions:\n");
+    for(i = 0; i < n; i++)
+    {
+        if((i + 1) % 2 == 0)
+            printf("%d ", a[i]);
+    }
+
+    printf("\nElements at odd positions:\n");
+    for(i = 0; i < n; i++)
+    {
+        if((i + 1) % 2 != 0)
+            printf("%d ", a[i]);
+    }
+
+    return 0;
+}
